@@ -8,6 +8,6 @@ public class task_1 {
         {
             count += ms[i];
         }
-        System.out.println(count + " " + count / 10.0);
+        System.out.println(count + " " + count / ms.length);
     }
 }

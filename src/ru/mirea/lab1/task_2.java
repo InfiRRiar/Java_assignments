@@ -16,7 +16,7 @@ public class task_2 {
             sum += count;
             i++;
         }
-        while (i < 9);
+        while (i < 10);
 
         i = 0;
         while (i < 10) {
@@ -24,6 +24,6 @@ public class task_2 {
             if (max < ms[i]) max = ms[i];
             i++;
         }
-        System.out.println("Sum: " + sum + " Min: " +min + " Max: " + max);
+        System.out.println("Sum: " + sum + " Min: " + min + " Max: " + max);
     }
 }
