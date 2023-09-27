@@ -1,6 +1,8 @@
-package ru.mirea.lab_6.task_1;
+package ru.mirea.lab_6.task_2;
 
-public class MovablePoint implements Movable{
+import ru.mirea.lab_6.task_1.Movable;
+
+public class MovablePoint implements Movable {
     private int x, y;
     private final int xSpeed, ySpeed;
 

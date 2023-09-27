@@ -1,4 +1,4 @@
-package ru.mirea.lab_6;
+package ru.mirea.lab_6.task_1;
 
 public class MovableCircle implements Movable {
 

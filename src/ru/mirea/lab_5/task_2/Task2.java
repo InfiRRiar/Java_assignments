@@ -1,11 +1,11 @@
-package ru.mirea.lab_5;
+package ru.mirea.lab_5.task_2;
 
 import javax.swing.*;
 import java.awt.*;
 import java.util.Random;
 
-public class Task2_1 extends JFrame {
-    Task2_1() {
+public class Task2 extends JFrame {
+    Task2() {
         super("Damn task");
         setSize(500, 500);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -21,9 +21,9 @@ public class Task2_1 extends JFrame {
 
             switch (choice) {
                 case 1 -> g.drawOval(rand.nextInt(50, 450), rand.nextInt(50, 450),
-                        rand.nextInt(20, 40), rand.nextInt(20, 40));
+                        rand.nextInt(20, 100), rand.nextInt(20, 100));
                 case 2 -> g.drawRect(rand.nextInt(50, 450), rand.nextInt(50, 450),
-                        rand.nextInt(20, 40), rand.nextInt(20, 40));
+                        rand.nextInt(20, 100), rand.nextInt(20, 100));
                 case 3 -> g.drawLine(rand.nextInt(50, 450), rand.nextInt(50, 450),
                         rand.nextInt(5, 450), rand.nextInt(5, 450));
             }

@@ -1,4 +1,4 @@
-package ru.mirea.lab_5;
+package ru.mirea.lab_5.task_1;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;

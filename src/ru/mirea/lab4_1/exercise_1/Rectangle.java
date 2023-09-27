@@ -1,4 +1,4 @@
-package ru.mirea.lab4_1.task_8;
+package ru.mirea.lab4_1.exercise_1;
 
 public class Rectangle extends Shape {
     protected double length, width;

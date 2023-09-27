@@ -6,15 +6,15 @@ public class Tester {
         shape.getType();
 
         Circle circle = new Circle(8);
-        System.out.println(circle.getType());
+        System.out.println(circle.toString());
         System.out.println("---------------------------");
 
         Rectangle rectangle = new Rectangle(10, 4.5);
-        System.out.println(rectangle.getType());
+        System.out.println(rectangle.toString());
         System.out.println("---------------------------");
 
         Square square = new Square(15);
-        System.out.println(square.getType());
+        System.out.println(square.toString());
         System.out.println("---------------------------");
 
     }

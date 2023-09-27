@@ -1,4 +1,4 @@
-package ru.mirea.lab_6;
+package ru.mirea.lab_6.task_1;
 
 public class MovablePoint implements Movable{
     private int x, y;

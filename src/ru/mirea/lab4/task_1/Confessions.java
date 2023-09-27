@@ -1,4 +1,4 @@
-package ru.mirea.lab4;
+package ru.mirea.lab4.task_1;
 
 public class Confessions {
     public void love_confession(Season season)

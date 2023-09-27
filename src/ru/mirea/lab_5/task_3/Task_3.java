@@ -1,4 +1,4 @@
-package ru.mirea.lab_5;
+package ru.mirea.lab_5.task_3;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
