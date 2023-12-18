@@ -1,4 +1,4 @@
-package ru.mirea.lab_23;
+package ru.mirea.lab_23.task_1;
 
 public class Main {
     public static void main(String[] args) {

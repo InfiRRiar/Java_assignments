@@ -1,4 +1,4 @@
-package ru.mirea.lab_9.task_2;
+package ru.mirea.lab_9.task_3;
 
 public class Student implements Comparable<Student>{
     private final int IDNumber;

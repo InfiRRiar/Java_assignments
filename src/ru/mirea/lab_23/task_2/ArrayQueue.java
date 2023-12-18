@@ -1,6 +1,6 @@
-package ru.mirea.lab_23.task_1;
+package ru.mirea.lab_23.task_2;
 
-public class ArrayQueue {
+public class ArrayQueue implements Queue{
     private Object[] elems;
     private int size;
     private int front_ind;
@@ -12,6 +12,7 @@ public class ArrayQueue {
         front_ind = 0;
     }
 
+    @Override
     public void clear()
     {
         for (int i = front_ind; i < front_ind + size; i++)
@@ -21,6 +22,7 @@ public class ArrayQueue {
         front_ind = 0;
     }
 
+    @Override
     public void enqueue(Object elem) {
         if ((front_ind + size) == elems.length) {
             System.out.println("Переполнение очереди, сброс данных");
@@ -31,6 +33,7 @@ public class ArrayQueue {
         size++;
     }
 
+    @Override
     public Object element() {
         if (isEmpty()) {
             System.out.println("Очередь пуста");
@@ -39,6 +42,7 @@ public class ArrayQueue {
         return elems[front_ind];
     }
 
+    @Override
     public Object dequeue() {
         if (isEmpty()) {
             System.out.println("Очередь пуста");
@@ -50,10 +54,12 @@ public class ArrayQueue {
         size--;
         return first;
     }
+    @Override
     public int size()
     {
         return size;
     }
+    @Override
     public boolean isEmpty() {
         return size == 0;
     }

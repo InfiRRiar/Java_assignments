@@ -1,6 +1,7 @@
-package ru.mirea.pr24.ex2;
+package ru.mirea.lab_24.task_3;
 import java.io.IOException;
 
 public interface ICreateDocument {
-    IDocument createDocument() throws IOException;
+    IDocument createNew() throws IOException;
+    IDocument createOpen() throws IOException;
 }

@@ -1,5 +1,5 @@
-package ru.mirea.pr24.ex1;
+package ru.mirea.lab_24.task_2;
 
 public interface ChairAbstractFactory {
-    public Chair createChair();
+    Chair createChair();
 }

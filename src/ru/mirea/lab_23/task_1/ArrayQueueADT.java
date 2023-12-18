@@ -1,9 +1,10 @@
-package ru.mirea.lab_23;
+package ru.mirea.lab_23.task_1;
 
 public class ArrayQueueADT {
     private Object[] elems = new Object[10];
     private int size = 0;
     private int front_ind = 0;
+
 
     public static ArrayQueueADT init()
     {
@@ -52,9 +53,6 @@ public class ArrayQueueADT {
         return size;
     }
     public boolean isEmpty() {
-        if (size == 0) {
-            return true;
-        }
-        return false;
+        return size == 0;
     }
 }

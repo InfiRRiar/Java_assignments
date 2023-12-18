@@ -1,4 +1,4 @@
-package ru.mirea.lab_23;
+package ru.mirea.lab_23.task_1;
 
 public class ArrayQueueModule {
     private static Object[] elems = new Object[10];
@@ -47,10 +47,7 @@ public class ArrayQueueModule {
         return size;
     }
     public static boolean isEmpty() {
-        if (size == 0) {
-            return true;
-        }
-        return false;
+        return size == 0;
     }
 
 }

@@ -1,57 +1,80 @@
-package ru.mirea.pr24.ex2;
+package ru.mirea.lab_24.task_3;
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.IOException;
 
 public class Window extends JFrame {
+    public Window(ICreateDocument doc){
+        JMenuBar bar = new JMenuBar();
 
-    public Window(){
+        JMenu menu = new JMenu("File");
+
+        JMenuItem create = new JMenuItem("Create");
+        JMenuItem open = new JMenuItem("Open");
+        JMenuItem save = new JMenuItem("Save");
+        JMenuItem exit = new JMenuItem("Exit");
+
+        create.addActionListener(new Listen(doc));
+        open.addActionListener(new Listen(doc));
+        save.addActionListener(new Listen(doc));
+        exit.addActionListener(new Listen(doc));
+
+        menu.add(create);
+        menu.add(open);
+        menu.add(save);
+        menu.add(exit);
+
+        bar.add(menu);
+        add(bar, BorderLayout.NORTH);
+
         setSize(600, 400);
-        String [] strFiles = {"Text", "Image", "Music"};
-        JMenu file = new JMenu("File");
-        JMenu create = createJMenu(strFiles, "Create");
-        JMenu open = createJMenu(strFiles, "Open");
-        file.add(create);
-        file.add(open);
-        JMenuBar fullMenu = new JMenuBar();
-        fullMenu.add(file);
-        setJMenuBar(fullMenu);
         setVisible(true);
         setLocationRelativeTo(null);
     }
 
-    private JMenu createJMenu(String [] items, String name){
-        JMenu ans = new JMenu(name);
-        for (int i = 0; i < 3; ++i){
-            int finalI = i;
-            ans.add(new JMenuItem(new AbstractAction(items[i]) {
-                public void actionPerformed(ActionEvent e) {
-                    if (finalI == 0) {
-                        try {
-                            IDocument doc = Factory.getDocument(new CreateText());
-                        } catch (IOException ex) {
-                            throw new RuntimeException(ex);
-                        }
-                    } else if (finalI == 1) {
-                        try {
-                            IDocument doc = Factory.getDocument(new CreateImage());
-                        } catch (IOException ex) {
-                            throw new RuntimeException(ex);
-                        }
-                    } else {
-                        try {
-                            IDocument doc = Factory.getDocument(new CreateMusic());
-                        } catch (IOException ex) {
-                            throw new RuntimeException(ex);
-                        }
-                    }
-                }
-            }));
+    private static class Listen implements ActionListener {
+        ICreateDocument create;
+        IDocument document = null;
+        Listen(ICreateDocument create)
+        {
+            this.create = create;
         }
-        return ans;
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            String line = e.getActionCommand();
+            System.out.println(line);
+            switch (line)
+            {
+                case "Create":
+                    try {
+                        document = create.createNew();
+                    } catch (IOException ex) {
+                        throw new RuntimeException(ex);
+                    }
+                    break;
+                case "Open":
+                    try {
+                        document = create.createOpen();
+                    } catch (IOException ex) {
+                        throw new RuntimeException(ex);
+                    }
+                    break;
+                case "Save":
+                    if (document == null) break;
+                    document.save();
+                    break;
+                case "Exit":
+                    document.exit();
+
+            }
+        }
     }
 
-    public static void main(String [] args){
-        new Window();
+    public static void main(String [] args) throws IOException {
+        ICreateDocument create = new CreateTextDocument();
+
+        new Window(create);
     }
 }

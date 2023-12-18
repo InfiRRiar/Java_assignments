@@ -5,16 +5,14 @@ import java.util.regex.Pattern;
 
 public class Main {
     public static void main(String[] args) {
-        final String regex = "\\d+[ ]*\\+";
-        final String[] lines = {"(1+8)–9/4","6/5–2*9"};
+        final String regex = "(^| )\\d+([.][\\d]{0,2})?\\s(USD|EU|RUB)";
+        final String string = "25.98 USD 25 RUB 44 ERR 0.004 EU 44 EU ";
 
-        final Pattern pattern = Pattern.compile(regex, Pattern.MULTILINE);
-        Matcher matcher;
+        final Pattern pattern = Pattern.compile(regex);
+        final Matcher matcher = pattern.matcher(string);
 
-        for (String line : lines) {
-            matcher = pattern.matcher(line);
-            if (matcher.find()) System.out.println(line + " True");
-            else System.out.println(line + " False");
+        while (matcher.find()) {
+            System.out.println("Full match: " + matcher.group(0));
         }
     }
 }

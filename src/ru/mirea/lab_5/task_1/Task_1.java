@@ -34,7 +34,6 @@ public class Task_1 {
 
         frame.setLayout(new GridBagLayout());
 
-
         frame.setVisible(true);
 
         buttonMilan.addActionListener(new ActionListener() {
@@ -57,8 +56,6 @@ public class Task_1 {
 
             }
         });
-        //JPanel panelMadrid = new JPanel();
-        //JLabel labelMadrid = new JLabel();
     }
 
     public static void decide_winner() {

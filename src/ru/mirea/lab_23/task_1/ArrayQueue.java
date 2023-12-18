@@ -1,4 +1,4 @@
-package ru.mirea.lab_23;
+package ru.mirea.lab_23.task_1;
 
 public class ArrayQueue {
     private Object[] elems;
@@ -55,9 +55,6 @@ public class ArrayQueue {
         return size;
     }
     public boolean isEmpty() {
-        if (size == 0) {
-            return true;
-        }
-        return false;
+        return size == 0;
     }
 }

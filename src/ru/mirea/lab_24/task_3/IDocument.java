@@ -1,4 +1,6 @@
-package ru.mirea.pr24.ex2;
+package ru.mirea.lab_24.task_3;
 
 public interface IDocument {
+    void save();
+    void exit();
 }

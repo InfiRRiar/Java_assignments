@@ -1,24 +1,26 @@
-package ru.mirea.lab_9.task_2;
+package ru.mirea.lab_9.task_3;
 
 import java.util.List;
 
+import java.util.ArrayList;
+import java.util.Random;
+
 public class Main {
     public static void main(String[] args) {
-        QuickSort res = new QuickSort();
+        MergeSort res = new MergeSort();
+        Random rand = new Random();
 
-        List<Student> array = res.getPoints();
-
-        for (int i = 0; i < array.size(); i++)
-        {
-            System.out.print(array.get(i).getPoints() + " ");
+        List<Student> array1 = new ArrayList<Student>();
+        List<Student> array2 = new ArrayList<Student>();
+        for (int i = 0; i < 10; i++) {
+            array1.add(new Student(rand.nextInt(70), rand.nextInt(300)));
+            array2.add(new Student(rand.nextInt(70), rand.nextInt(300)));
         }
-        System.out.println();
 
-        res.quickSort(0, array.size() - 1);
+        List<Student> sorted_array = res.mergeSort(array1, array2);
 
-        for (int i = 0; i < array.size(); i++)
-        {
-            System.out.print(array.get(i).getPoints() + " ");
+        for (Student student : sorted_array) {
+            System.out.print(student.getPoints() + " ");
         }
     }
 }

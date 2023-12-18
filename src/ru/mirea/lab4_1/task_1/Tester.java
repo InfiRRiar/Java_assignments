@@ -16,6 +16,5 @@ public class Tester {
         Square square = new Square(15);
         System.out.println(square.toString());
         System.out.println("---------------------------");
-
     }
 }

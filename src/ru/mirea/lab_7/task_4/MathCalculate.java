@@ -4,10 +4,7 @@ public interface MathCalculate {
 
     double PI = Math.PI;
 
-    public default double cplx_module(double real, double imaginary)
-    {
-        return Math.pow(Math.pow(real, 2) + Math.pow(imaginary, 2), 0.5);
-    };
+    public double cplx_module(double real, double imaginary);
 
-    public double
+    public double pow(double num, double count);
 }

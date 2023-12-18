@@ -6,7 +6,7 @@ import java.util.Random;
 
 public class Task2 extends JFrame {
     Task2() {
-        super("Damn task");
+        super("Rly hard one");
         setSize(500, 500);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setVisible(true);

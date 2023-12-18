@@ -1,4 +1,4 @@
-package ru.mirea.lab_9.task_3;
+package ru.mirea.lab_9.task_2;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -37,7 +37,6 @@ public class QuickSort implements Comparator<Student> {
             while (compare(points.get(i), opora) < 0) {
                 i++;
             }
-
             while (compare(points.get(j), opora) > 0) {
                 j--;
             }

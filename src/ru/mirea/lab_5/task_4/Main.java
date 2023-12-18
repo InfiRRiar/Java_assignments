@@ -2,8 +2,9 @@ package ru.mirea.lab_5.task_4;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.Random;
 
-public class Main {
+public class Main{
     public static void main(String[] args) {
 
         JFrame frame = new JFrame();
@@ -11,14 +12,15 @@ public class Main {
         frame.setSize(new Dimension(500, 500));
 
         String line;
-        String PATH = "C:\\Users\\sereb\\IdeaProjects\\MIREA_term_3\\src\\ru\\mirea\\lab_5\\task_4\\";
+        String PATH = "src\\ru\\mirea\\lab_5\\task_4\\";
         int x = 1;
 
         Task_4 obj = new Task_4(PATH + "1.PNG");
         frame.add(obj);
 
-
         frame.setVisible(true);
+
+        Random rand = new Random();
 
         while (true) {
             x += 1;
@@ -33,7 +35,6 @@ public class Main {
             line = x % 3 + 1 + ".PNG";
             obj.setPath(PATH + line);
             obj.repaint();
-
         }
     }
 }

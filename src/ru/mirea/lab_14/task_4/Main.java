@@ -1,4 +1,4 @@
-package ru.mirea.lab_14.task_3;
+package ru.mirea.lab_14.task_4;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -8,7 +8,7 @@ public class Main {
         final String regex = "\\d+[ ]*\\+";
         final String[] lines = {"(1+8)–9/4","6/5–2*9"};
 
-        final Pattern pattern = Pattern.compile(regex, Pattern.MULTILINE);
+        final Pattern pattern = Pattern.compile(regex);
         Matcher matcher;
 
         for (String line : lines) {
